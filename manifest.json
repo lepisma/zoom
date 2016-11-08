@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "zoom",
+  "description": "Chrome pdf viewer style zoom buttons for normal pages",
+  "version": "0.1.0",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "exclude_matches": ["*://*/*.pdf*"],
+      "css": ["./style.css"],
+      "js": ["./content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
